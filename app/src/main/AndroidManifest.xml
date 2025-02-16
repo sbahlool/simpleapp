@@ -28,7 +28,8 @@
             </intent-filter>
 
         </activity>
-
+        <activity android:name=".auth.ImageActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
