@@ -20,6 +20,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import androidx.core.content.ContextCompat;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -94,6 +96,10 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, ImageActivity.class));
         } else {
             Toast.makeText(this, "Invalid Credentials!", Toast.LENGTH_SHORT).show();
+            emailInput.setError("invalid credentials");
+            emailInput.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.error_red));
+            passwordInput.setError("invalid credentials");
+            passwordInput.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.error_red));
             Log.e("LoginActivity", "Login failed for: " + enteredEmail);
         }
     }
