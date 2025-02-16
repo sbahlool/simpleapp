@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.simpleapp"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
 
 
     <application
@@ -27,8 +28,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".auth.ImageActivity"
-            android:exported="false" />
+
     </application>
 
 </manifest>
